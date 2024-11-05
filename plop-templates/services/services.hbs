@@ -1,0 +1,27 @@
+import { api } from '@/http/api.ts';
+
+import type  { {{ singular-pascalCase name }}, {{ singular-pascalCase name }}FormData} from '../types'
+
+export class {{ plural-pascalCase name }}Service {
+    private static BASE_URL = '/{{ plural name }}';
+
+    static async getAll(): Promise<{{ singular-pascalCase name }}> {
+        const response = await api.get(this.BASE_URL);
+        return response.data;
+    }
+
+    static async create(data: {{ singular-pascalCase name }}FormData) {
+        const response = await api.post(this.BASE_URL, data);
+        return response.data;
+    }
+
+    static async update(id: number, data: {{ singular-pascalCase name }}FormData) {
+        const response = await api.patch(`${this.BASE_URL}/${id}`, data);
+        return response.data;
+    }
+
+    static async delete(id: number) {
+        const response = await api.delete(`${this.BASE_URL}/${id}`);
+        return response.data;
+    }
+}

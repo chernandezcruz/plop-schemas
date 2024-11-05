@@ -1,0 +1,8 @@
+import { z } from '@/config/i18n';
+
+export const {{ singular-camelCase name }}Schema = z.object({});
+
+export const {{ singular-camelCase   name }}FormDataSchema = {{ singular-camelCase name }}Schema.omit({});
+
+export type {{ singular-pascalCase name }} = z.infer<typeof {{ singular-camelCase name }}Schema>;
+export type {{ singular-pascalCase name }}FormData = z.infer<typeof {{ singular-camelCase   name }}FormDataSchema>;

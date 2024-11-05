@@ -1,0 +1,11 @@
+{
+  "type": "module",
+  "scripts": {
+    "plop": "plop"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "plop": "^4.0.1",
+    "pluralize": "^8.0.0"
+  }
+}
